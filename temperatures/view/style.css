@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body, input, select, textarea {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+body > * {
+    margin: 1rem 0;
+}
+body > :first-child {
+    margin-top: 0;
+}
+body > :last-child {
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 0.25em 0.5em;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Loader */
+.loader {
+    text-align: center;
+}
+.loader.loading::before {
+    content: "Chargement...";
+}
+.loading::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    border: 0.2em solid #ccc;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+td img {
+    height: 1.5em;
+    vertical-align: middle;
+    padding: 0 0.5em;
+}
+
+#temperatures-chart {
+    height: 80vh;
+    text-align: center;
+}

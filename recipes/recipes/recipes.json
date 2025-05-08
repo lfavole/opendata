@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Cookies",
+        "duration": 10,
+        "amount": 20,
+        "people": 4,
+        "ingredients": [
+            {"name": "œufs", "quantity": 1},
+            {"name": "huile", "quantity": 3, "unit": "cuillère à soupe"},
+            {"name": "sucre", "quantity": 80, "unit": "g"},
+            {"name": "arôme", "quantity": 1, "unit": "cuillère à café"},
+            {"name": "farine", "quantity": 150, "unit": "g"}
+        ],
+        "steps": [
+            "Mélanger tous les ingrédients (la farine en dernier)",
+            "Faire des petits tas sur la plaque recouvrante du papier cuisson",
+            "Enfourner à 180°C pendant 10 minutes"
+        ]
+    },
+    {
+        "title": "Gâteau de semoule",
+        "duration": 120,
+        "amount": 1,
+        "people": 4,
+        "ingredients": [
+            {"name": "semoule", "quantity": 100, "unit": "g"},
+            {"name": "lait", "quantity": 500, "unit": "mL"},
+            {"name": "sucre", "quantity": 50, "unit": "g"},
+            {"name": "sucre vanillé", "quantity": 1, "unit": "sachet"},
+            {"name": "œufs", "quantity": 1},
+            {"name": "raisins secs", "quantity": 1, "unit": "poignée"}
+        ],
+        "steps": [
+            "faire chauffer dans une casserole, le lait et les sucres",
+            "rajouter la semoule et la faire cuire pendant 5 minutes, elle doit devenir épaisse",
+            "hors du feu, rajouter l'œuf et mélanger",
+            "mettre des raisins secs dans un plat et les recouvrir de la préparation",
+            "mettre au réfrigérateur pendant 2 heures"
+        ]
+    },
+    {
+        "title": "Gâteau au yaourt (marbré)",
+        "duration": 40,
+        "amount": 1,
+        "people": 6,
+        "ingredients": [
+            {"name": "œufs", "quantity": 3},
+            {"name": "yaourt", "quantity": 1},
+            {"name": "sucre", "quantity": 2, "unit": "pot"},
+            {"name": "farine", "quantity": 3, "unit": "pot"},
+            {"name": "huile", "quantity": 0.5, "unit": "pot"},
+            {"name": "bicarbonate", "quantity": 1, "unit": "cuillère à café"},
+            {"name": "arôme", "quantity": 1, "unit": "cuillère à café"}
+        ],
+        "steps": [
+            "mélanger tous les ingrédients",
+            "verser la préparation dans un moule à cake",
+            "faire cuire au four 40 minutes à 180°",
+            "partager la pâte en 2",
+            "mélanger une partie avec du chocolat fondu au préalable au bain-marie",
+            "alterner les couches dans le moule"
+        ]
+    },
+    {
+        "title": "Gâteau au yaourt (tigré)",
+        "duration": 40,
+        "amount": 1,
+        "people": 6,
+        "ingredients": [
+            {"name": "œufs", "quantity": 3},
+            {"name": "yaourt", "quantity": 1},
+            {"name": "sucre", "quantity": 2, "unit": "pot"},
+            {"name": "farine", "quantity": 3, "unit": "pot"},
+            {"name": "huile", "quantity": 0.5, "unit": "pot"},
+            {"name": "bicarbonate", "quantity": 1, "unit": "cuillère à café"},
+            {"name": "arôme", "quantity": 1, "unit": "cuillère à café"}
+        ],
+        "steps": [
+            "mélanger tous les ingrédients",
+            "verser la préparation dans un moule à cake",
+            "faire cuire au four 40 minutes à 180°",
+            "partager la pâte en 2",
+            "mélanger une partie avec du chocolat fondu au préalable au bain-marie",
+            "dans un moule rond ou carré, en alternant verser les 2 préparations les unes dans les autres pour former une cible"
+        ]
+    }
+]

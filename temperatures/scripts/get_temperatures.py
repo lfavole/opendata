@@ -55,6 +55,7 @@ if __name__ == "__main__":
             int(row["Centimètres de neige / millimètres de pluie"] or "0"),
             int(row["Température maximale (en °C)"].replace(",", ".")) if row["Température maximale (en °C)"] else None,
             row["Notes"],
+            {"Oui": True, "Non": False, "": None}[row["Sky est-il venu ?"]],
         )
         folder.add_temperature(temp)
         temperatures_count += 1

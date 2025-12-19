@@ -25,9 +25,11 @@ class Temperature:
     wind: bool = False
     hail: bool = False
     mist: bool = False
+    rain_mm: int = 0
     snow_cm: int = 0
     max_temp: float | None = None
     notes: str = ""
+    cat: bool | None = None
 
     WEATHERS = ("sunny", "few_clouds", "cloudy", "rain", "snow")
 
@@ -46,9 +48,11 @@ class Temperature:
             wind=data.get("wind", False),
             hail=data.get("hail", False),
             mist=data.get("mist", False),
+            rain_mm=data.get("rain_mm", 0),
             snow_cm=data.get("snow_cm", 0),
             max_temp=data.get("max_temp"),
             notes=data.get("notes", ""),
+            cat=data.get("cat"),
         )
 
     def serialize(self) -> dict[str, str | int | float]:
@@ -58,7 +62,7 @@ class Temperature:
             "temperature": int(self.temperature) if self.temperature.is_integer() else self.temperature,
             "weather": self.weather,
         }
-        for key in ["wind", "hail", "mist", "snow_cm"]:
+        for key in ["wind", "hail", "mist", "rain_mm", "snow_cm"]:
             value = getattr(self, key)
             if value:
                 ret[key] = value
@@ -66,6 +70,8 @@ class Temperature:
             ret["max_temp"] = self.max_temp
         if self.notes:
             ret["notes"] = self.notes
+        if self.cat is not None:
+            ret["cat"] = self.cat
         return ret
 
 

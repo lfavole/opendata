@@ -77,12 +77,22 @@ if __name__ == "__main__":
             mist = True
             additional_weathers = additional_weathers.replace("m", "")
 
-        while True:
-            try:
-                snow_cm = int(input("Snow centimeters [0]: ").strip().replace(",", ".") or 0)
-                break
-            except ValueError:
-                print("Invalid snow centimeters. Please try again.")
+        rain_mm = 0
+        snow_cm = 0
+        if weather == "snow":
+            while True:
+                try:
+                    snow_cm = int(input("Snow centimeters [0]: ").strip().replace(",", ".") or 0)
+                    break
+                except ValueError:
+                    print("Invalid snow centimeters. Please try again.")
+        else:
+            while True:
+                try:
+                    rain_mm = int(input("Rain millimeters [0]: ").strip().replace(",", ".") or 0)
+                    break
+                except ValueError:
+                    print("Invalid rain millimeters. Please try again.")
 
         max_temp = None
         while True:
@@ -97,7 +107,10 @@ if __name__ == "__main__":
 
         notes = input("Notes: ").strip()
 
-        temperature = Temperature(day, temp, weather, wind, hail, mist, snow_cm, max_temp, notes)
+        val = input("Was the cat there? [yes]: ").strip()
+        cat = val.lower() in {"", "y", "yes", "o", "oui"}
+
+        temperature = Temperature(day, temp, weather, wind, hail, mist, rain_mm, snow_cm, max_temp, notes, cat)
         folder.add_temperature(temperature)
         print("Added!")
         print()

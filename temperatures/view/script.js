@@ -47,7 +47,7 @@ async function fetchData() {
     }
 
     // Fetch the temperatures from the API
-    const url = `https://lfavole.github.io/temperatures/data/${year}.json`;
+    const url = `https://lfavole.github.io/opendata/temperatures/data/${year}.json`;
     let response;
     try {
         response = await fetch(url);

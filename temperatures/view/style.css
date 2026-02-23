@@ -58,7 +58,50 @@ td img {
     padding: 0 0.5em;
 }
 
-#temperatures-chart {
+#temperatures-chart, #monthly-temperatures-chart {
     height: 80vh;
     text-align: center;
+}
+#weathers-chart {
+    height: 50vh;
+    text-align: center;
+}
+#cat-streaks {
+    white-space: pre-wrap;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+#cat-chart {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, auto);
+    justify-content: left;
+    gap: 0.1em;
+}
+#cat-chart .cell {
+    width: 1em;
+    height: 1em;
+    border-radius: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+}
+#cat-chart .cell.there {
+    background-color: #025f02;
+    color: white;
+}
+#cat-chart .cell.not-there {
+    background-color: #b2eeb2;
+}
+#cat-chart .cell.unknown {
+    border: 1px solid black;
+}
+#cat-chart .cell.unknown:empty::before {
+    content: "×";
+}
+
+#global-data {
+    white-space: pre-wrap;
 }

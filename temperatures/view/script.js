@@ -47,7 +47,7 @@ async function fetchData() {
     }
 
     // Fetch the temperatures from the API
-    const url = `https://lfavole.github.io/opendata/temperatures/data/${year}.json`;
+    const url = `../data/${year}.json`;
     let response;
     try {
         response = await fetch(url);
@@ -72,9 +72,16 @@ async function fetchData() {
     }
     loader.classList.remove('loading');
 
+    window.data = data;
     // Display the temperatures
     await displayTemperatures(data);
+    await displayMonthlyTemperatures(data);
+    await displayWeathers(data);
+    updateCatData = () => displayCat(data, +document.getElementById("cat-missing").value);
+    updateCatData();
+    await displayGlobalData(data);
 }
+let updateCatData = () => {};
 window.addEventListener("DOMContentLoaded", async function() {
     // Set the current year in the location hash
     if (!location.hash) {
@@ -93,4 +100,5 @@ window.addEventListener("DOMContentLoaded", async function() {
 
     await fetchData();
     window.addEventListener("hashchange", fetchData);
+    document.getElementById("cat-missing").addEventListener("change", updateCatData);
 });
